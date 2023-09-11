@@ -1,0 +1,54 @@
+﻿<Window x:Class="EventAggregatorExample.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:EventAggregatorExample"
+        xmlns:essential="clr-namespace:EventAggregatorExample"
+        xmlns:vm="clr-namespace:EventAggregatorExample.ViewModel"
+        Title="Main View" Height="Auto" Width="800">
+    <Window.Resources>
+
+
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Content="Abdallah Khatib, abd.taw@gmail.com" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <Label Grid.Row="1" Content="Event Aggregator Example" HorizontalAlignment="Center" VerticalAlignment="Center" />    
+        </Grid>
+        <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="300"/>
+            </Grid.ColumnDefinitions>
+            <local:UpdateUserControl Grid.Column="0"
+                                     HorizontalAlignment="center" 
+                                     VerticalAlignment="Center"  
+                                     Width="100" Height="50"
+                                     DataContext="{Binding UpdateViewModelInstance, Source={StaticResource ViewModelLocator}}"/>
+            <local:ListDisplayUserControl Grid.Column="1"
+                                          HorizontalAlignment="center" 
+                                          VerticalAlignment="Center"
+                                          DataContext="{Binding ListDisplayViewModelInstance, Source={StaticResource ViewModelLocator}}"/>
+            <local:ListDisplay2UserControl Grid.Column="2"
+                                          HorizontalAlignment="center" 
+                                          VerticalAlignment="Center"
+                                          DataContext="{Binding ListDisplay2ViewModelInstance, Source={StaticResource ViewModelLocator}}"/>
+        </Grid>
+        <Grid Grid.Row="2">
+
+            <local:ListDisplay3UserControl 
+                                          HorizontalAlignment="center" 
+                                          VerticalAlignment="Center"
+                                          DataContext="{Binding ListDisplay3ViewModelInstance, Source={StaticResource ViewModelLocator}}"/>
+        </Grid>
+    </Grid>
+</Window>

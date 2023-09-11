@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="EventAggregatorExample.UpdateUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Height="100" Width="200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0"
+            Content="Update Data 1" Command="{Binding UpdateCommand}" />
+        <Button Grid.Row="1"
+            Content="Update Data 2" Command="{Binding Update2Command}"/>
+
+    </Grid>
+</UserControl>
