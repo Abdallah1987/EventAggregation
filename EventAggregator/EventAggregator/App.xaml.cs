@@ -21,9 +21,6 @@ namespace EventAggregatorExample
 
         private void RunApplication()
         {
-            // Create and show your main window
-            var mainWindow = new MainView();
-            mainWindow.Show();
         }
     }
 }

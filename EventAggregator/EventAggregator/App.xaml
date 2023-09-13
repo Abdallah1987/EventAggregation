@@ -3,13 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:EventAggregatorExample"
              xmlns:vm="clr-namespace:EventAggregatorExample.ViewModel"
-             >
+             StartupUri="MainView.xaml">
     <Application.Resources>
-        <DataTemplate DataType="{x:Type vm:UpdateViewModel}">
-            <local:UpdateUserControl />
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type vm:ListDisplayViewModel}">
-            <local:ListDisplayUserControl  />
-        </DataTemplate>
+        
     </Application.Resources>
 </Application>
